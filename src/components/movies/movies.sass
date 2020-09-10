@@ -1,0 +1,33 @@
+.movies
+  width: 90%
+  margin: 0 auto
+  display: flex
+  flex-wrap: wrap
+
+  &__item
+    width: 18%
+    text-align: center
+    margin: 0 auto
+    margin-top: 1%
+
+    &__title
+      color: white
+      text-transform: uppercase 
+
+.movies__item__img
+    box-shadow: 3px -2px 5px rgba(252,70,70,1)
+    transition: 0.5s
+    height: 400px
+    border-radius: 5px
+
+.movies__item__img:hover
+    cursor: pointer
+    box-shadow: 3px -2px 15px #e64b4b
+
+@media screen and ( max-width: 768px)
+  .movies
+    width: 100%
+
+    .movies__item
+      width: 100%
+      margin-top: 5%
