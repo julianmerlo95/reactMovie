@@ -1,38 +1,39 @@
 .comment
-  border-top: 2px solid black
+  border-top: 3px solid white
 
   & h2
     text-transform: uppercase
 
   &__form
+    text-align: left
+    margin-top: 2%
     
     &__input
       width: 50%
-      padding: 3px
+      padding: 6px
       margin-bottom: 5px
 
     &__area
       width: 50%
-      padding: 4px
+      padding: 7px
 
     &__button
       width: 20%
       padding: 5px
       cursor: pointer
       margin-bottom: 3%
+      background: #ef4747
+      color: white
+      text-transform: uppercase
+      border-radius: 5px
 
   &__qualification
     display: flex
-    justify-content: center
     margin-right: 10px
 
-  &__storage
-    display: flex
-    border: 2px solid black
-    margin-top: 5px
-
-    &__name
-      margin-right: 50px
+    &__option
+      height: 27px
+      margin: 15px 0px 0px 5px
 
 @media screen and ( max-width: 425px )
   .comment__form

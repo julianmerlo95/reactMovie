@@ -1,6 +1,6 @@
 import React from 'react'
-import Movies from '../components/movies/Movies';
-import Movie from "../components/movies/movie/Movie";
+import Content from '../components/content/Content';
+import RenderContent from "../components/renderContent/RenderContent";
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
 function Layout(){
@@ -8,8 +8,8 @@ function Layout(){
     <div>
       <BrowserRouter>
         <Switch>
-          <Route exact path="/movie" component={Movie} />
-          <Route exact path="/" component={Movies} />
+          <Route exact path="/content" component={RenderContent} />
+          <Route exact path="/" component={Content} />
         </Switch>
       </BrowserRouter>
     </div>

@@ -1,13 +1,13 @@
 import React, { useState } from "react";
+import Comment from './comment/Comment';
 import "./comments.sass";
 
 function Comments({ id }) {
-  let porcentaje = 0;
   const storage = JSON.parse(localStorage.getItem(id));
   const [comment, setComment] = useState({
     name: "",
     comment: "",
-    qualification: "",
+    qualification: ""
   });
 
   const onChangeHandler = (e) => {
@@ -20,23 +20,24 @@ function Comments({ id }) {
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
-    console.log(comment);
-    //TODO: Actualizar cuando se agrega el primero, por que no se hasta que no se actualiza la pagina
     if (storage) {
       localStorage.setItem(id, JSON.stringify([...storage, comment]));
+      return;
     } else {
       localStorage.setItem(id, JSON.stringify([comment]));
+      return;
     }
   };
 
   return (
     <div className="comment">
-      <h2>Comments</h2>
       <form className="comment__form" onSubmit={(e) => onSubmitHandler(e)}>
+        <h3>Send Comment this content</h3>
         <div>
           <input
             className="comment__form__input"
             onChange={(e) => onChangeHandler(e)}
+            value="name"
             placeholder="Name"
             type="text"
             name="name"
@@ -55,7 +56,12 @@ function Comments({ id }) {
         </div>
         <div className="comment__qualification">
           <h3>Rate movie: </h3>
-          <select onChange={(e) => qualificationHandler(e)}>
+          <select
+            value="50"
+            className="comment__qualification__option"
+            onChange={(e) => qualificationHandler(e)}
+          >
+            <option value="select">Select</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -63,23 +69,9 @@ function Comments({ id }) {
             <option value="5">5</option>
           </select>
         </div>
-        <button className="comment__form__button">Comment</button>
+        <button type="submit" className="comment__form__button">Comment</button>
       </form>
-      {storage ? (
-        storage.map((item, index) => {
-          porcentaje += Number(item.qualification) / storage.length;
-          return (
-            <div className="comment__storage" key={index}>
-              <h3 className="comment__storage__name">Name: {item.name}</h3>
-              <h3 className="comment__storage__comment">
-                Comment: {item.comment}
-              </h3>
-            </div>
-          );
-        })
-      ) : (
-        <h2>Not comments</h2>
-      )}
+      <Comment storage={storage} />
     </div>
   );
 }

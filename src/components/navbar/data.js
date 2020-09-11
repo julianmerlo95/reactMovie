@@ -10,7 +10,6 @@ export const settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
-  autoplay: 1000,
   arrows: false
 };
 

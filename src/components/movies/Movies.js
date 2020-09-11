@@ -3,8 +3,7 @@ import { actionMovie } from "../../redux/action/actionMovie";
 import Qualification from '../qualification/Qualification';
 import { withRouter } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import Navbar from '../navbar/Navbar';
-import axios from "axios";
+import {request} from '../../axios/index';
 import "./movies.sass";
 
 function Movies(props) {
@@ -12,32 +11,21 @@ function Movies(props) {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    searchMovieHandler("avenger").then((response) => {
+    request("avenger", "movie").then((response) => {
       setMovies(response.Search);
       return response;
     });
     return;
   }, []);
 
-  const searchMovieHandler = async (title) => {
-    try {
-      const response = await axios.get(
-        `http://www.omdbapi.com/?s=${title}&apikey=847a6e12`
-      );
-      return response.data;
-    } catch (err) {
-      return err;
-    }
-  };
-
   const reDirectHandler = (movie) => {
     dispatch(actionMovie(movie));
-    return props.history.push(`/movie`);
+    return props.history.push(`/content`);
   };
   
   return (
-    <div>
-      <Navbar />
+    <div style={{ width: "90%", margin: "0 auto" }}>
+      <h2 className="movies__title">Peliculas</h2>
       <div className="movies">
         {movies && movies.length > 0
           ? movies.map((movie, index) => {
@@ -45,9 +33,8 @@ function Movies(props) {
                 <div
                   className="movies__item"
                   key={index}
-                  onClick={() => reDirectHandler(movie)}
-                >
-                  <img className="movies__item__img" src={movie.Poster}></img>
+                  onClick={() => reDirectHandler(movie)}>
+                  <img alt="img_movies" className="movies__item__img" src={movie.Poster}></img>
                   <h5 className="movies__item__title">{movie.Title}</h5>
                   <Qualification id={movie.imdbID} />
                 </div>
