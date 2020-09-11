@@ -1,6 +1,8 @@
 .series__title
   color: white
   text-transform: uppercase
+  text-align: center
+
   
 .series
   width: 90%
@@ -9,6 +11,10 @@
   margin: 0 auto
   text-align: center
   margin-top: 30px
+
+  &__order
+    color: white
+    text-align: center
 
   &__item 
     width: 20%
@@ -23,3 +29,11 @@
 
     & img:hover
       box-shadow: 3px -2px 15px #e64b4b
+
+@media screen and ( max-width: 768px)
+  .series
+    width: 100%
+
+    &__item
+      width: 100%
+      margin-top: 5%

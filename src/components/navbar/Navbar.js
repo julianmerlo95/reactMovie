@@ -1,13 +1,15 @@
-import React from 'react'
-import {settings, arrayImage} from './data';
+import React from "react";
+import { settings, arrayImage } from "./data";
+import Search from "../search/Search";
 import Slider from "react-slick";
-import './navbar.sass';
+import "./navbar.sass";
 
-function Navbar(){
+function Navbar() {
   return (
     <div className="navbar">
       <div className="navbar__title">
         <h1 className="navbar__title__text">React Movies</h1>
+        <Search />
       </div>
       <Slider {...settings}>
         {arrayImage.map((img, index) => {
@@ -22,4 +24,4 @@ function Navbar(){
   );
 }
 
-export default Navbar
+export default Navbar;

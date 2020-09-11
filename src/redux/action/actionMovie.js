@@ -4,3 +4,10 @@ export const actionMovie = (data) => {
     data,
   };
 };
+
+export const actionSearchMovie = (data) => {
+  return {
+    type: "SEARCH_MOVIE",
+    data,
+  };
+};

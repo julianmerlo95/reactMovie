@@ -1,7 +1,7 @@
-import React from 'react';
-import './comment.sass';
+import React from "react";
+import "./comment.sass";
 
-function Comment({storage}){
+function Comment({ storage }) {
   return (
     <div className="comment">
       <h2>Comments</h2>
@@ -25,4 +25,4 @@ function Comment({storage}){
   );
 }
 
-export default Comment
+export default Comment;

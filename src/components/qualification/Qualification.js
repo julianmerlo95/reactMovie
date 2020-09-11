@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 import "./quantification.sass";
 
-function Qualification({id}){
-    let porcentaje = 0;
-    let storage = JSON.parse(localStorage.getItem(id));
+function Qualification({ id }) {
+  let porcentaje = 0;
+  let storage = JSON.parse(localStorage.getItem(id));
 
   return (
     <>
@@ -25,4 +25,4 @@ function Qualification({id}){
   );
 }
 
-export default Qualification
+export default Qualification;
