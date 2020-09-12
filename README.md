@@ -26,6 +26,10 @@ https://react-movie-ha4miej5f.vercel.app/
 - -----------------loading
 - ---redux
 
+## Environment
+REACT_APP_URL=https://nodemovies.herokuapp.com/api/content
+
+
 ## Dependendies
 - "axios": "^0.20.0",
 - "node-sass": "^4.14.1",
