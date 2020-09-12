@@ -12,7 +12,6 @@ function App() {
   return (
     <div>
       <Suspense fallback={<Loading/>}>
-        <Navbar />
         <BrowserRouter>
           <Switch>
             <Route exact path="/" component={Content} />
