@@ -22,8 +22,8 @@ https://react-movie-pysmbu8rv.vercel.app/
 - -----------------movieSearch
 - -------------series
 - -------------util
-- ----------------button
-- ----------------loading
+- -----------------button
+- -----------------loading
 - ---redux
 
 ## Install dependencies
