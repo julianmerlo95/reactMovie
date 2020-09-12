@@ -22,7 +22,7 @@ function RenderContent(props) {
           <Comments id={movie.imdbID} />
         </div>
       ) : (
-        <h2>Error</h2>
+        <h2 className="movie__error">Not found content, go back the home!</h2>
       )}
     </div>
   );
