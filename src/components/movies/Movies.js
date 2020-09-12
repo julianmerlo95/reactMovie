@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { actionMovie } from "../../redux/action/actionMovie";
 import Qualification from "../qualification/Qualification";
 import imgNotFound from "../../assets/img/imgNotFound.png";
-import {Loading} from '../util/loading/Loading';
+import { Loading } from '../util/loading/Loading';
 import { withRouter } from "react-router-dom";
 import Button from "../util/button/Button";
 import { useDispatch } from "react-redux";
