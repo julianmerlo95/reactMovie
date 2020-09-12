@@ -1,6 +1,6 @@
 # React Movies
 
-## Url movie in web
+## Url movie on the web
 https://react-movie-pysmbu8rv.vercel.app/
 
 ## Estructure
