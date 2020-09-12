@@ -1,7 +1,7 @@
 .movie
   width: 90%
   margin: 0 auto
-
+  
   &__button
     padding: 8px
     cursor: pointer
@@ -14,10 +14,16 @@
     text-align: center
     color: white
 
-  &__error
+.error
+  height: 600px
+  display: flex
+  justify-content: center
+  align-items: center
+
+  &__title
     color: white
     text-align: center
-    
+
 @media screen and ( max-width: 425px  )
   .movie__item img
     width: 90%

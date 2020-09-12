@@ -9,8 +9,7 @@ function RenderContent(props) {
 
   return (
     <div className="movie">
-      <button className="movie__button" 
-              onClick={() => props.history.push(``)}>
+      <button className="movie__button" onClick={() => props.history.push(``)}>
         Back to home
       </button>
       {Object.keys(movie).length > 0 ? (
@@ -22,7 +21,9 @@ function RenderContent(props) {
           <Comments id={movie.imdbID} />
         </div>
       ) : (
-        <h2 className="movie__error">Not found content, go back the home!</h2>
+        <div className="error">
+          <h2 className="error__title">Not found content, go back the home!</h2>
+        </div>
       )}
     </div>
   );
