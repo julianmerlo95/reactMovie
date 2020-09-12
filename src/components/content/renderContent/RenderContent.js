@@ -2,7 +2,6 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { withRouter } from "react-router-dom";
 import Comments from "../../comments/Comments";
-import Footer from "../../footer/Footer";
 import "./renderContent.sass";
 
 function RenderContent(props) {
@@ -10,7 +9,7 @@ function RenderContent(props) {
 
   return (
     <div className="movie">
-      <button className="movie__button" onClick={() => props.history.push(`/`)}>
+      <button className="movie__button" onClick={() => props.history.push(``)}>
         Back to home
       </button>
       {Object.keys(movie).length > 0 ? (
@@ -24,7 +23,6 @@ function RenderContent(props) {
       ) : (
         <h2>Error</h2>
       )}
-      <Footer />
     </div>
   );
 }

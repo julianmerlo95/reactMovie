@@ -1,25 +1,23 @@
 import React from "react";
-import Movies from "../movies/Movies";
-import Navbar from "../navbar/Navbar";
-import Series from "../series/Series";
+import MoviesSearch from "../search/moviesSearch/MoviesSearch";
 import { useSelector } from "react-redux";
-import MovieSearch from "../search/moviesSearch/MoviesSearch";
-import Footer from "../footer/Footer";
+import Movies from "../movies/Movies";
+import Series from "../series/Series";
+import Header from '../header/Header';
 
 function Content() {
   const movies = useSelector((state) => state.searchMovie);
 
   return (
     <>
-      <Navbar />
+      <Header />
       {Object.keys(movies).length === 0 ? (
         <>
           <Series /> <Movies />
         </>
       ) : (
-        <MovieSearch />
+        <MoviesSearch/>
       )}
-      <Footer />
     </>
   );
 }

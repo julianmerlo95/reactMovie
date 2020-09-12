@@ -3,10 +3,9 @@ import axios from "axios";
 export const request = async (title, type) => {
   try {
     const response = await axios.get(
-      `${process.env.REACT_APP_URL}?s=${title}&type=${type}&apikey=${process.env.REACT_APP_KEY}`
+      `${process.env.REACT_APP_URL}?title=${title}&type=${type}`
     );
-    const arraySort = response.data.Search.sort((a, b) => b.Year - a.Year);
-    return arraySort;
+    return response.data.content;
   } catch (err) {
     return err;
   }

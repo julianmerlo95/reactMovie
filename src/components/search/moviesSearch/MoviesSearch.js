@@ -4,7 +4,7 @@ import Qualification from "../../qualification/Qualification";
 import imgNotFound from '../../../assets/img/imgNotFound.png'
 import { withRouter } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import {useSelector} from 'react-redux';
+import { useSelector } from 'react-redux';
 import './moviesSearch.sass';
 
 function MoviesSearch (props) {

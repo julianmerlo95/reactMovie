@@ -5,6 +5,7 @@
   &__title
     color: white
     display: flex
+    justify-content: space-between
     background: #06224c
     margin-bottom: 10px
 
@@ -13,29 +14,11 @@
       margin-left: 10px
       cursor: pointer
 
-  &__carrousel
-    width: 100%
-    
-    & img
-      width: 100%
-      height: 600px
-      object-fit: cover 
-
 @media screen and ( max-width: 768px  )
   .navbar
-    width: 95%
-    
-    &__carrousel img
-      width: 100%
-      height: 550px
-      object-fit: contain
-    
-@media screen and ( max-width: 425px  )
-  .navbar__carrousel img
     width: 100%
-    height: 200px
-    object-fit: contain
-
+  
+@media screen and ( max-width: 425px  )
   .navbar__title
     color: white
     display: flex
