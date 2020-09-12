@@ -9,7 +9,8 @@ function RenderContent(props) {
 
   return (
     <div className="movie">
-      <button className="movie__button" onClick={() => props.history.push(``)}>
+      <button className="movie__button" 
+              onClick={() => props.history.push(``)}>
         Back to home
       </button>
       {Object.keys(movie).length > 0 ? (

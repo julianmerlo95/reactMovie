@@ -39,8 +39,7 @@ function Comments({ id }) {
       <form
         id="formComment"
         className="comment__form"
-        onSubmit={(e) => onSubmitHandler(e)}
-      >
+        onSubmit={(e) => onSubmitHandler(e)}>
         <h3>Send Comment this content</h3>
         <div>
           <input
@@ -49,8 +48,7 @@ function Comments({ id }) {
             placeholder="Name"
             type="text"
             name="name"
-            required
-          />
+            required/>
         </div>
         <div>
           <textarea
@@ -59,16 +57,14 @@ function Comments({ id }) {
             placeholder="Comment"
             type="text"
             name="comment"
-            required
-          />
+            required/>
         </div>
         <div className="comment__qualification">
           <h3>Rate movie: </h3>
           <select
             className="comment__qualification__option"
             onChange={(e) => qualificationHandler(e)}
-            required
-          >
+            required>
             <option value="0">0</option>
             <option value="1">1</option>
             <option value="2">2</option>

@@ -28,8 +28,7 @@ function Search() {
           onChange={(e) => onChangeHandler(e)}
           type="text"
           placeholder="Search"
-          required
-        />
+          required/>
         <button>Search</button>
       </form>
     </div>

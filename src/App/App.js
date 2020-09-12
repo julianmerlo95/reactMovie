@@ -4,7 +4,7 @@ const Navbar = lazy(() => import("../components/navbar/Navbar"));
 const Footer = lazy(() => import("../components/footer/Footer"));
 const Content = lazy(() => import("../components/content/Content"));
 const RenderContent = lazy(() =>
-  import("../components/content/renderContent/RenderContent")
+import("../components/content/renderContent/RenderContent")
 );
 
 function App() {

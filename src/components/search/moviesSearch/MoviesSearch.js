@@ -26,8 +26,7 @@ function MoviesSearch (props) {
               <div
                 key={index}
                 onClick={() => reDirectHandler(movie)}
-                className="movies__item"
-              >
+                className="movies__item">
                 <img
                   alt="img_movies"
                   className="movies__item__img"
